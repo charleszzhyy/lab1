@@ -14,6 +14,24 @@
       <a href="../contact/index.html">Contact</a>
       <a href="../resume/index.html">Resume</a>
     </nav>
+    <form class="contact">
+        <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+
+        <label>
+            <span>Subject</span>
+            <input type="text" name="subject" placeholder="Hello">
+        </label>
+
+        <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" placeholder="Sup?"></textarea>
+        </label>
+
+        <button type="submit">Send</button>
+    </form>
     <form action="mailto:charles@example.com" method="POST" enctype="text/plain">
         <label>Email:
             <input type="email" name="email">
