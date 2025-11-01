@@ -1,17 +1,17 @@
-import { fetchJSON, renderProjects } from '../global.js';
+import { fetchJSON, renderProjects } from './global.js';
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
-let allProjects = [];
-let searchQuery = '';
-let selectedIndex = -1; 
-
-let sliceLabelsForCurrentView = [];
+let allProjects = [];        
+let searchQuery = '';       
+let selectedIndex = -1;     
+let sliceLabelsForCurrentView = []; 
 
 async function initProjectsPage() {
-  allProjects = await fetchJSON('../lib/projects.json');
+  allProjects = await fetchJSON('./lib/projects.json');
 
   renderEverything();
 
+  
   const searchInput = document.querySelector('.searchBar');
   if (searchInput) {
     searchInput.addEventListener('input', (event) => {
@@ -21,11 +21,11 @@ async function initProjectsPage() {
     });
   }
 }
-
 function renderEverything() {
   const projectsContainer =
     document.getElementById('projects-list') ||
     document.querySelector('.projects');
+
   const titleEl = document.querySelector('.projects-title');
 
   const filteredBySearch = filterBySearch(allProjects, searchQuery);
@@ -72,7 +72,7 @@ function buildPieDataFromProjects(projectsArray) {
 }
 
 function renderPieAndLegend(currentProjects) {
-
+  
   const pieData = buildPieDataFromProjects(currentProjects);
 
   clearPieAndLegend();
@@ -109,7 +109,7 @@ function drawPieChart(pieData) {
   const arcGenerator = d3
     .arc()
     .innerRadius(0)
-    .outerRadius(50);
+    .outerRadius(50); 
 
   svg
     .selectAll('path')
