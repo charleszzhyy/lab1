@@ -8,16 +8,35 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📁%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-  <h1 class="projects-title">Projects</h1>
-
 
   <script type="module" src="../global.js"></script>
 
+  <h1 class="projects-title">Projects</h1>
+
+  <div class="chart-row">
+    <svg
+      id="projects-pie-plot"
+      viewBox="-50 -50 100 100"
+      aria-label="Projects per year pie chart"
+      role="img">
+    </svg>
+
+    <ul class="legend"></ul>
+  </div>
+
+  <input
+    class="searchBar"
+    type="search"
+    aria-label="Search projects"
+    placeholder="🔍  Search projects…"
+  />
 
   <section class="projects" id="projects-list">
- 
+  
   </section>
 
+ 
+  <script type="module" src="https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm"></script>
   <script type="module" src="./projects.js"></script>
 </body>
 </html>
