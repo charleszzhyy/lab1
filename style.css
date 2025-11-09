@@ -407,3 +407,17 @@ dl.info[hidden]:not(:hover, :focus-within) {
 #chart circle:hover {
   transform: scale(1.15);
 }
+
+#chart circle.selected { fill: #ff606b; }
+
+
+@keyframes marching-ants {
+  to { stroke-dashoffset: -8; }
+}
+.selection {
+  fill-opacity: 0.10;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
