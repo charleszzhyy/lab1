@@ -224,7 +224,7 @@ function renderScatterPlot(data, commits) {
 
   svg.call(d3.brush().on('start brush end', brushed));
   
-  svg.selectAll('.dots, .overlay, .selection').raise();
+  svg.selectAll('.dots').raise();
 }
 
 
