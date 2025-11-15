@@ -70,5 +70,11 @@
     "year": "2024",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Quisque porta. Fusce suscipit libero eget elit."
+  },
+  {
+  "title": "Bikewatching: Bluebikes Traffic Map",
+  "year": "2025",
+  "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+  "description": "An interactive Mapbox + D3 visualization of Boston & Cambridge Bluebikes stations, traffic patterns, and time-based dynamics."
   }
 ]
