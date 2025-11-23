@@ -1,49 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meta · Charles Zhang</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link
-    rel="icon"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'
-    viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📁%3C/text%3E%3C/svg%3E"
-  />
+  <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
-  
+
   <script type="module" src="../global.js"></script>
 
   <h1>Meta</h1>
   <p>This page includes stats about the code of this website.</p>
 
-  
-  <div id="stats"></div>
+  <div id="scrolly-1">
 
-  <h2>Commits by time of day</h2>
-  <div id="chart"></div>
-  <p id="selection-count">No commits selected</p>
-  <dl id="language-breakdown" class="stats"></dl>
-  
-  <dl id="commit-tooltip" class="info tooltip" hidden>
-    <dt>Commit</dt>
-    <dd><a href="#" id="commit-link" target="_blank" rel="noopener noreferrer"></a></dd>
+    <div id="scatter-story"></div>
 
-    <dt>Date</dt>
-    <dd id="commit-date"></dd>
+    <div id="scatter-plot">
 
-    <dt>Time</dt>
-    <dd id="commit-time"></dd>
+      <div id="commit-filter">
+        <label>
+          Show commits until:
+          <input type="range" id="commit-progress" min="0" max="100" value="100">
+          <time></time>
+        </label>
+      </div>
 
-    <dt>Author</dt>
-    <dd id="commit-author"></dd>
+      <h2>Commits by time of day</h2>
 
-    <dt>Lines edited</dt>
-    <dd id="commit-lines"></dd>
-  </dl>
+      <div id="stats"></div>
 
- 
+      <div id="chart"></div>
+
+      <p id="selection-count" hidden>No commits selected</p>
+      <dl id="language-breakdown" class="stats" hidden></dl>
+
+      <dl id="commit-tooltip" class="info tooltip" hidden>
+        <dt>Commit</dt>
+        <dd><a href="#" id="commit-link" target="_blank" rel="noopener noreferrer"></a></dd>
+        <dt>Date</dt>
+        <dd id="commit-date"></dd>
+        <dt>Time</dt>
+        <dd id="commit-time"></dd>
+        <dt>Author</dt>
+        <dd id="commit-author"></dd>
+        <dt>Lines edited</dt>
+        <dd id="commit-lines"></dd>
+      </dl>
+
+      
+      <dl id="files"></dl>
+
+    </div>
+  </div>
+
   <script type="module" src="./main.js"></script>
+
 </body>
 </html>

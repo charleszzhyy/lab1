@@ -2,17 +2,14 @@ html {
   color-scheme: light dark;
 }
 
-
 nav {
   --border-color: oklch(50% 0.1 200 / 40%);
   border-bottom-color: var(--border-color);
 }
 
-
 nav a:hover {
   background-color: color-mix(in oklch, var(--color-accent, oklch(80% 0.1 200)), canvas 85%);
 }
-
 
 label.color-scheme {
   position: absolute;
@@ -29,11 +26,7 @@ label.color-scheme select {
   padding: 0.15em 0.3em;
 }
 
-
-
-
 body {
-
   font: 100%/1.5 system-ui;
   max-width: 100ch;
   margin: 0 auto;
@@ -41,97 +34,86 @@ body {
 }
 
 :root {
-  --color-accent: oklch(65% 0.5 0);  
-  accent-color: var(--color-accent); 
+  --color-accent: oklch(65% 0.5 0);
+  accent-color: var(--color-accent);
 }
-
 
 nav {
-  display: flex;                     
-  justify-content: space-around;      
-  margin-bottom: 1rem;               
-  padding-block: 0.25rem;           
-  border-bottom: 1px solid oklch(80% 0.03 200); 
-  
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  padding-block: 0.25rem;
+  border-bottom: 1px solid oklch(80% 0.03 200);
 }
 
-
 nav a {
-  flex: 1;                 
-  text-align: center;      
-  text-decoration: none;    
-  color: inherit;          
-  padding: 0.5em;           
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5em;
   display: inline-block;
 }
 
-
 nav a.current {
   border-bottom: 0.4em solid oklch(80% 0.03 200);
-  padding-bottom: 0.1em;   
+  padding-bottom: 0.1em;
 }
-
 
 nav a:hover {
-  border-bottom: 0.4em solid var(--color-accent); 
-  color: var(--color-accent);                    
+  border-bottom: 0.4em solid var(--color-accent);
+  color: var(--color-accent);
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
   font: inherit;
 }
 
-
 form.contact {
   display: grid;
-  grid-template-columns: auto 1fr;  
-  gap: 1em;                         
-  margin-block: 1rem;             
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+  margin-block: 1rem;
 }
 
-
-input, textarea {
+input,
+textarea {
   width: 100%;
   box-sizing: border-box;
 }
 
-
 form.contact label {
-  
   display: contents;
-  margin-block: 0.25em; 
+  margin-block: 0.25em;
 }
-
 
 @supports (grid-template-columns: subgrid) {
   form.contact label {
     display: grid;
-    grid-template-columns: subgrid; 
-    grid-column: 1 / -1;            
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
     margin-block: 0.25em;
   }
 }
 
-
 form.contact label > span {
-  align-self: center;  
+  align-self: center;
 }
-
 
 form.contact > button {
-  grid-column: 1 / -1;     
-  justify-self: start;    
+  grid-column: 1 / -1;
+  justify-self: start;
   padding: 0.5em 1em;
 }
-
 
 form.contact input,
 form.contact textarea {
   padding: 0.5em;
-  border: 1px solid oklch(80% 0.03 200); 
+  border: 1px solid oklch(80% 0.03 200);
   border-radius: 0.25rem;
 }
-
 
 form.contact button {
   color: white;
@@ -156,10 +138,9 @@ form.contact button:hover {
   border: 1px solid oklch(92% 0.02 200 / 0.9);
   border-radius: 0.5rem;
   padding: 0.75rem;
-  display: grid;   
+  display: grid;
   gap: 0.5rem;
 }
-
 
 .projects img {
   width: 100%;
@@ -168,20 +149,21 @@ form.contact button:hover {
   border-radius: 0.25rem;
 }
 
-
 @supports (grid-template-rows: subgrid) {
-  .projects { grid-auto-rows: auto auto 1fr; }
+  .projects {
+    grid-auto-rows: auto auto 1fr;
+  }
   .projects article {
-    grid-template-rows: subgrid; 
-    grid-row: span 3;             
+    grid-template-rows: subgrid;
+    grid-row: span 3;
   }
 }
 
-
 @supports not (grid-template-rows: subgrid) {
-  .projects article { grid-template-rows: auto auto 1fr; }
+  .projects article {
+    grid-template-rows: auto auto 1fr;
+  }
 }
-
 
 h1 {
   font-size: 400%;
@@ -195,14 +177,13 @@ h1 {
   text-wrap: balance;
 }
 
-
 .projects article {
   color: #111;
 }
 
 .projects article h2 {
   color: #000;
-  font-size: 1.25rem;   /* optional: make sure it's visible */
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -214,64 +195,57 @@ h1 {
   margin-top: 0.5rem;
 }
 
-
 #projects-pie-plot {
-  max-width: 20em;     
-  margin-block: 2em;   
-  overflow: visible;    
-  display: block;      
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+  display: block;
 }
-
-
 
 .chart-row {
   display: flex;
-  flex-wrap: wrap;         
+  flex-wrap: wrap;
   align-items: flex-start;
-  gap: 1rem;                
-  margin-block: 1rem 2rem; 
+  gap: 1rem;
+  margin-block: 1rem 2rem;
 }
 
-
 #projects-pie-plot {
-  flex: 0 0 auto;          
-  max-width: 20em;        
+  flex: 0 0 auto;
+  max-width: 20em;
   overflow: visible;
   display: block;
 }
 
 .legend {
-  flex: 1 1 auto;           
+  flex: 1 1 auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
-  gap: 0.5rem 1rem;       
+  gap: 0.5rem 1rem;
   font-size: 0.9rem;
-  border: 1px solid oklch(80% 0.03 200); 
+  border: 1px solid oklch(80% 0.03 200);
   border-radius: 0.35rem;
   padding: 0.5rem 0.75rem;
-  margin: 0;                
-  list-style: none;       
+  margin: 0;
+  list-style: none;
 }
-
 
 .legend li {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-
 .legend .swatch {
   width: 0.75rem;
   aspect-ratio: 1 / 1;
   background-color: var(--color);
-  border-radius: 0.25rem;  
+  border-radius: 0.25rem;
   border: 1px solid oklch(30% 0.03 200 / 40%);
-  display: inline-block;   
+  display: inline-block;
   flex-shrink: 0;
 }
 
@@ -286,9 +260,9 @@ h1 {
   box-sizing: border-box;
   font: inherit;
   padding: 0.5em 0.75em;
-  border: 1px solid oklch(80% 0.03 200); 
+  border: 1px solid oklch(80% 0.03 200);
   border-radius: 0.35rem;
-  margin-block: 1rem 2rem; 
+  margin-block: 1rem 2rem;
 }
 
 #projects-pie-plot path {
@@ -301,7 +275,7 @@ h1 {
 }
 
 .selected {
-  --color: oklch(60% 0.45 0) !important;  
+  --color: oklch(60% 0.45 0) !important;
 }
 
 .selected:is(path) {
@@ -344,53 +318,54 @@ h1 {
   line-height: 1.1;
 }
 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10ch, 1fr));
-  gap: 0.5rem 1rem;
-  border: 1px solid oklch(80% 0.03 200);
-  border-radius: 0.5rem;
-  padding: 0.75rem 1rem;
-  margin-block: 1rem 2rem;
+/* Step 1.1: filtering UI layout */
+#commit-filter {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-block: 1rem;
 }
-.stats dt {
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+#commit-filter label {
+  flex: 1;
+}
+#commit-filter input[type="range"] {
+  width: 100%;
+}
+#commit-filter time {
+  margin-left: auto;
+  font-size: 0.9rem;
   opacity: 0.7;
 }
-.stats dd {
-  margin: 0 0 0.75rem 0;
-  font-weight: 700;
-  font-size: 1.4rem;
-  line-height: 1.1;
+
+/* gridlines etc */
+.gridlines .tick line {
+  stroke: oklch(80% 0.03 200 / 60%);
 }
-
-
-.gridlines .tick line { stroke: oklch(80% 0.03 200 / 60%); }
-.gridlines path { display: none; }
-
+.gridlines path {
+  display: none;
+}
 
 dl.info {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: .25rem .75rem;
+  gap: 0.25rem 0.75rem;
   margin: 0;
-  padding: .75rem .9rem;
-  border-radius: .5rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.5rem;
   background: color-mix(in oklab, canvas, canvastext 8%);
   box-shadow: 0 8px 20px rgb(0 0 0 / 15%);
   border: 1px solid oklch(80% 0.03 200 / 60%);
   transition: opacity 300ms, visibility 300ms;
 }
 dl.info dt {
-  font-size: .75rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  opacity: .7;
+  opacity: 0.7;
 }
 dl.info.tooltip {
-  position: fixed;         
-  top: 1rem; left: 1rem;   
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
   z-index: 1000;
 }
 dl.info[hidden]:not(:hover, :focus-within) {
@@ -398,26 +373,118 @@ dl.info[hidden]:not(:hover, :focus-within) {
   visibility: hidden;
 }
 
-
 #chart circle {
-  transition: transform 200ms, opacity 200ms;
+  transition: r 200ms ease-out, cx 200ms linear, cy 200ms linear,
+    opacity 200ms ease-out, transform 200ms ease-out;
   transform-origin: center;
   transform-box: fill-box;
+
+  @starting-style {
+    r: 0;
+  }
 }
+
 #chart circle:hover {
   transform: scale(1.15);
 }
 
-#chart circle.selected { fill: #ff606b; }
-
+#chart circle.selected {
+  fill: #ff606b;
+}
 
 @keyframes marching-ants {
-  to { stroke-dashoffset: -8; }
+  to {
+    stroke-dashoffset: -8;
+  }
 }
 .selection {
-  fill-opacity: 0.10;
+  fill-opacity: 0.1;
   stroke: black;
   stroke-opacity: 0.7;
   stroke-dasharray: 5 3;
   animation: marching-ants 2s linear infinite;
+}
+
+/* ---------- Step 2: files unit visualization ---------- */
+
+#files {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 0.25rem 1rem;
+  margin-block: 1.25rem 2rem;
+  padding-block: 0.25rem;
+  border-top: 1px solid oklch(85% 0.03 200);
+  border-bottom: 1px solid oklch(85% 0.03 200);
+}
+
+#files > div {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  padding-block: 0.3rem 0.4rem;
+  border-bottom: 1px solid oklch(90% 0.02 200 / 0.7);
+}
+#files > div:last-child {
+  border-bottom: none;
+}
+
+#files dt {
+  grid-column: 1;
+  margin: 0;
+}
+#files dt code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+#files dt small {
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.65;
+  margin-top: 0.15rem;
+}
+
+#files dd {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 0.15em;
+  padding-top: 0.6em;
+  margin-left: 0;
+}
+
+/* one dot per line */
+.loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background: steelblue;
+  border-radius: 50%;
+}
+
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+
+#scrolly-1 > * {
+  flex: 1;
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  height: 58vh;
+}
+
+#scatter-story .step {
+  padding: 1.5rem 0;
 }
